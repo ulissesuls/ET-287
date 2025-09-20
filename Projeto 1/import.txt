@@ -1,0 +1,27 @@
+# Install the ucimlrepo package
+pip install ucimlrepo
+
+
+# import the dataset into your code
+from ucimlrepo import fetch_ucirepo
+ 
+# fetch dataset
+wine_quality = fetch_ucirepo(id=186)
+ 
+# data (as pandas dataframes)
+X = wine_quality.data.features
+y = wine_quality.data.targets
+ 
+# metadata
+print(wine_quality.metadata)
+ 
+# variable information
+print(wine_quality.variables)
+
+
+# Cite
+P. Cortez, A. Cerdeira, F. Almeida, T. Matos, and J. Reis. "Wine Quality," UCI Machine Learning Repository, 2009. [Online]. Available: https://doi.org/10.24432/C56S3T.
+
+
+# Full documentation
+https://github.com/uci-ml-repo/ucimlrepo
